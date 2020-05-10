@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Churrasco.Dal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -18,6 +19,8 @@ namespace Churrasco
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            DalHelper.CriarBancoSQLite();
+            DalHelper.CriarTabelaSQlite();
         }
 
         public IConfiguration Configuration { get; }
