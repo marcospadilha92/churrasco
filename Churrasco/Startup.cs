@@ -20,7 +20,8 @@ namespace Churrasco
         {
             Configuration = configuration;
             DalHelper.CriarBancoSQLite();
-            DalHelper.CriarTabelaSQlite();
+            DalHelper.CriarTabelaChurrascoSQlite();
+            DalHelper.CriarTabelaChurrascoDetalhesSQlite();
         }
 
         public IConfiguration Configuration { get; }

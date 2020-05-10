@@ -7,10 +7,11 @@ namespace Churrasco.Models
 {
     public class ChurrascoModel
     {
-        public int id { get; set; }
-        public DateTime data { get; set; }
-        public string descricao { get; set; }
-        public int numeroParticipantes { get; set; }
-        public int valor { get; set; }
+        public int Id { get; set; }
+        public string Data { get; set; }
+        public string Descricao { get; set; }
+        public int NumeroParticipantes { get; set; }
+        public int ValorTotal { get; set; }        
+        public int? ValorPessoa { get; set; }
     }
 }

@@ -14,13 +14,25 @@ namespace Churrasco.Controllers{
         ChurrascoService churrascoService = new ChurrascoService();
 
         [HttpPost]
-        public void InsereChurrasco([FromBody] ChurrascoModel churrascoModel) {
-            churrascoService.InsereChurrasco(churrascoModel);
+        public String InsereChurrasco([FromBody] ChurrascoModel churrascoModel) {
+            return churrascoService.InsereChurrasco(churrascoModel);
         }
 
         [HttpGet]
         public List<ChurrascoModel> BuscaChurrascos() {
             return churrascoService.BuscaChurrascos();
         }
+
+        [HttpGet("{id}")]
+        public ChurrascoModel BuscaChurrasco(int id)
+        {
+            return churrascoService.BuscaChurrasco(id);
+        }
+
+        [HttpDelete("{id}")]
+        public String DeletaChurrasco(int id) {
+            return churrascoService.DeletaChurrasco(id);
+        }
+
     }
 }
